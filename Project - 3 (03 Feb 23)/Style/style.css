@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Red Rose", cursive;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url('/Assets/bgn.png');
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+header{
+    margin: 20px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 270px;
+    justify-content: space-around;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffc233;
+    font-weight: bolder;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+nav div img {
+    width: 150px;
+}
+
+nav div button{
+    padding: 10px 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff505f;
+    font-size: 15px;
+}
+nav div button:hover{
+    color: #ff505f;
+    background-color: white;
+
+}
+
+main{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    color: #ffc233;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+main button{
+    padding: 15px 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff505f;
+    font-size: 20px;
+}
+main button:hover{
+    color: #ff505f;
+    background-color: white;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 60px;
+    margin-top: 45px;
+}
+
+footer img {
+    width: 130px;
+}
