@@ -1,2 +1,2 @@
-# Project---3-03-Feb-23-
+Projects-PW-Skills
 This HTML and CSS Project was made by Satyam for PW Skills Assignment.
