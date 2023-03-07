@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+    background-color: #f0f4f5;
+    color: black;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 22px;
+}
+.logo img{
+    width: 75%;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+.menu ul li{
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu ul li a:hover{
+    background-color: black;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 22px;
+}
+/* header part end  */
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 400px;
+    position: relative;;
+    top: 130px;
+    width: 98vw;
+    height: 51vh;
+}
+
+.mainleft h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.mainleft p{
+    margin-bottom: 10px;
+    
+}
+.mainleft button{
+    padding: 11px 30px;
+    border: none;
+    border-radius: 22px;
+    background-color: #20bc7e;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    right: 30px;
+
+}
+.mainleft button:hover{
+    background-color: white;
+    color: #20bc7e;
+    font-size: 18px;
+}
+.bottomAngle{
+    position: relative;
+    left: 520px;
+    bottom: 20px;
+    background-color: transparent;
+}
+.stethoscope{
+    width: 35%;
+    background-color: transparent;
+    position: absolute;
+    left: 350px;
+    bottom: -110px;
+}
+.mouse{
+    position: relative;
+    left: 350px;
+    top: 30px;
+}
+
+
+
+.mainright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.yellowBox{
+    width: 20%;
+    background-color: transparent;
+    position: absolute;
+    top: 160px;
+    right: -10px;
+    overflow: hidden;
+}
+.greenBox{
+    width: 30%;
+    background-color: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 36px;
+    right: -10px;
+}
+.doctor{
+    width: 31%;
+    background-color: transparent;
+    position: absolute;
+    right: -10px;
+    overflow: hidden;
+}
