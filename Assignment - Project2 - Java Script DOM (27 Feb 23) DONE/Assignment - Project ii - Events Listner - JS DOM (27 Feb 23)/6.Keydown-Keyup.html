@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown-Keyup Event</title>
+    <!-- CSS  -->
+    <style>
+        h1, p, h2{
+            text-align: center;
+        }
+        span{
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .keydownevent{
+            background-color: orange;
+            padding: 40px;
+            box-shadow: 0 0 5px black;
+            border: 2px solid black;
+        }
+        .keyupevent{
+            background-color: rgb(221, 241, 33);
+            padding: 40px;
+            box-shadow: 0 0 5px black;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Keydown-Keyup Event</h1>
+    <p>Please Press Any Key! <span>HOLD IT</span></p>
+    <h2 id="keydown"></h2>
+    <p><span>NOW</span> Leave it.</p>
+    <h2 id="keyup"></h2>
+
+    <!-- Java Script  -->
+    <script>
+        document.addEventListener("keydown", () => {
+            document.getElementById("keydown").innerText = "Yeah, Keydown Event Succesfully Working";
+            document.getElementById("keydown").className = "keydownevent";
+        });
+        document.addEventListener("keyup", () => {
+            document.getElementById("keyup").innerText = "Yeah, Keyup Event Succesfully Working";
+            document.getElementById("keyup").className = "keyupevent";
+        });
+    </script>
+</body>
+</html>

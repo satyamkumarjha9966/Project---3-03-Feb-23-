@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Event</title>
+    <!-- CSS  -->
+    <style>
+        h1,h2,p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Onclick Event</h1>
+    <p>Please Single Click on Screen</p>
+    <h2 id="onclickid"></h2>
+    
+    <!-- JavaScript  -->
+    <script>
+        document.addEventListener("click", () => {
+            document.getElementById("onclickid").innerText = "Onclick Event Succesfully Working";
+            document.getElementById("onclickid").style.color = "black";
+            document.getElementById("onclickid").style.border = "2px solid black";
+            document.getElementById("onclickid").style.padding = "10px 0px";
+            document.getElementById("onclickid").style.backgroundColor = "orange";
+            document.getElementById("onclickid").style.boxShadow = "0 0 5px black";
+        });
+    </script>
+</body>
+</html>

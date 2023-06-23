@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseOver Event</title>
+    <!-- CSS  -->
+    <style>
+        .box{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+        #btn{
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 22px;
+            box-shadow: 0 0 5px black;
+        }
+        .btnevent{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>MouseOver Event</h1>
+        <button id="btn" >Put Your Courser on Button</button>
+    </div>
+    
+    <!-- JavaScript  -->
+    <script>
+        let buttonid = document.getElementById("btn");
+        buttonid.addEventListener("mouseover", () => {
+        buttonid.innerText = "Yeah, MouseOver Event Succesfully Working";
+        buttonid.className = "btnevent"
+        });
+    </script>   
+</body>
+</html>

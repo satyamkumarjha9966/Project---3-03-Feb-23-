@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseOut Event</title>
+    <!-- CSS  -->
+    <style>
+        .box{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+        #btn{
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 22px;
+            box-shadow: 0 0 5px black;
+        }
+        .btnevent{
+            background-color: rgb(229, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>MouseOut Event</h1>
+        <button id="btn" >Put Your Courser on Button and then leave</button>
+    </div>
+    
+    <!-- JavaScript  -->
+    <script>
+        let buttonid = document.getElementById("btn");
+        buttonid.addEventListener("mouseout", () => {
+        buttonid.innerText = "Yeah, MouseOut Event Succesfully Working :)";
+        buttonid.className = "btnevent"
+        });
+    </script>   
+</body>
+</html>

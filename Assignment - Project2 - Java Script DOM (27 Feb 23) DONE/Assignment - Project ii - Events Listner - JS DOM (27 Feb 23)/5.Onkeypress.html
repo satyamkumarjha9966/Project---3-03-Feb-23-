@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onkeypress Event</title>
+    <!-- CSS  -->
+    <style>
+        h1,h2,p{
+            text-align: center;
+        }
+        .Onkeypressidevent{
+            background-color: orange;
+            padding: 40px;
+            box-shadow: 0 0 5px black;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Onkeypress Event</h1>
+    <p>Please Click Any Key</p>
+    <h2 id="Onkeypressid"></h2>
+
+    <!-- script  -->
+    <script>
+        document.addEventListener("keypress", () => {
+            document.getElementById("Onkeypressid").innerText = "Yeah, Onkeypress Event Succesfully Working";
+            document.getElementById("Onkeypressid").className = "Onkeypressidevent"
+        });
+    </script>
+</body>
+</html>
