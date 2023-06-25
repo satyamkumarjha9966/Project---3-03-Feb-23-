@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TODO App</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(to top, #4e90e3, #61d7d2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #box{
+            height: 400px;
+            width: 350px;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: white;
+            overflow: auto;
+        }
+        h1{
+            margin-bottom: 20px;
+            font-weight: bold;
+
+        }
+
+        input{
+            padding: 8px 15px;
+            width: 72%;
+            font-weight: bold;
+        }
+        button{
+            padding: 8px 20px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border-radius: 4px;
+        }
+        li{
+            margin-top: 15px;
+            background-color: rgb(241, 236, 236);
+            padding: 8px 15px;
+            text-align: left;
+            font-weight: bold;
+            color: black;
+        }
+        input::placeholder{
+            text-align: left;
+            font-weight: bold;
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1> Todo App</h1>
+        <div class="option">
+            <input type="text" placeholder="Add Your New TODO" id="input">
+            <button id="btn">+</button>
+        </div>
+        <ul type="none" id="list">
+
+        </ul>
+    </div>
+
+    <script>
+        let Btn = document.getElementById('btn')
+        let Input = document.getElementById('input')
+        let List = document.getElementById('list')
+
+        Btn.addEventListener('click', () => {
+            let newList = document.createElement('li');
+            newList.textContent = Input.value;
+
+            List.appendChild(newList);
+        })
+
+    </script>
+</body>
+</html>

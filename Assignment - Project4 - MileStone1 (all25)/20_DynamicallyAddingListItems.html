@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Adding List Items to an Ordered List</title>
+    <style>
+        h1,h2{
+            text-align: center;
+        }
+        h2{
+            margin-bottom: -20px;
+            color: orange;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 22px;
+            background-color: blue;
+            color: white;
+        }
+        h1{
+            font-size: 60px;
+            margin-bottom: 0px;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        li{
+            font-weight: bold;
+
+        }
+        button{
+            cursor: pointer;
+            padding: 10px 22px;
+            border-radius: 22PX;
+            border: 2PX solid black;
+            background-color: orange;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dynamically Adding List Items to an Ordered List</h2>
+    <h1>What you'll learn</h1>
+    <ol>
+        <li id="list">HTML and Semantics</li>
+    </ol>
+    <button id="btn">Click here To know More About it!</button>
+
+    <script>
+        let Btn = document.getElementById('btn')
+
+        let listItems = ['HTML and Semantics','Starting with CSS','Working Template','Mobile responsive webpages','Grid and Flex-box in CSS','Projects using HTML & CSS','Version Control and Git','Getting Started with JavaScript','Advance JavaScript','Working with DOM','Making Projects using HTML, CSS and JavaScript','Understanding Fundamental of Computer Science','Getting Started with Database','Understanding the Database','Starting with NodeJS and Express','Understanding React and its Fundamentals','Understanding Hooks and Routers','Starting and Completing Full Fledge Projects']
+
+        let nextIndex = 1;
+
+
+
+        Btn.addEventListener('click', () => {
+            // Check if there are remaining items in the list
+            if (nextIndex < listItems.length-1) {
+                
+                // Acess the list element in JS
+                let List = document.getElementById('list');
+
+                // Create a new list item element
+                let newList = document.createElement('li');
+
+                // Set the text content of the new list item
+                newList.textContent = listItems[nextIndex++];
+
+                // Append the new list item to the list element
+                List.appendChild(newList);
+
+            }else{
+                // Display a message indicating that all items have been added
+                alert('All items have been added.')
+            }
+                
+            
+        })
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text on Button click</title>
+    <style>
+        body{
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            padding: 8px 20px;
+            border: 2px solid black;
+            border-radius: 12px;
+            cursor: pointer;
+            background-color: orange;
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+        }
+        button:hover{
+            color: white;
+            background-color: black;
+            border: 3px solid orange;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="heading">The most affordable learning platform</h1>
+    <button onclick="changeText()">Click on Button to Change Text</button>
+    
+    <script>
+        function changeText() {
+            let toggledText = document.getElementById('heading')
+            if (toggledText.innerText==="The most affordable learning platform") {
+                toggledText.innerText="PW Skills";
+                
+            } else {
+                toggledText.innerHTML="The most affordable learning platform"
+                
+            }
+        }
+    </script>
+</body>
+</html>
+
+

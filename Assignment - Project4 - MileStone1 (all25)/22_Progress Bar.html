@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+        <style>
+            body{
+                height: 200vh;
+            }
+            #progress-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background-color: lightgray;
+                z-index: 9999;
+            }
+    
+            #progress-bar-fill {
+                height: 100%;
+                background-color: green;
+                width: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="progress-bar">
+            <div id="progress-bar-fill"></div>
+        </div>
+    
+        <script>
+            // Get the progress bar elements
+            const progressBar = document.getElementById('progress-bar');
+            const progressBarFill = document.getElementById('progress-bar-fill');
+    
+            // Calculate the maximum scrollable height
+            const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    
+            // Function to update the progress bar
+            function updateProgressBar() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const progress = (scrollTop / documentHeight) * 100;
+                progressBarFill.style.width = progress + '10%';
+            }
+    
+            // Event listener for scroll event
+            document.addEventListener('scroll', updateProgressBar);
+        </script>
+    </body>
+    </html>
+    

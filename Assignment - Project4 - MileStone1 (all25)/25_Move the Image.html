@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move the Image</title>
+    <style>
+        #image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="image"><img src="https://cdn.pixabay.com/photo/2023/06/14/06/22/cat-8062388_640.jpg" alt=""></div>
+
+    <script>
+        // Get the image element
+        const image = document.getElementById('image');
+
+        // Set initial position and speed
+        let positionX = 0;
+        let positionY = 0;
+        const speed = 10;
+
+        // Function to update the position of the image
+        function updatePosition() {
+            image.style.left = positionX + 'px';
+            image.style.top = positionY + 'px';
+        }
+
+        // Event listener for keydown event
+        document.addEventListener('keydown', function(event) {
+            const key = event.key;
+
+            // Move the image based on the arrow key pressed
+            if (key === 'ArrowUp') {
+                positionY -= speed;
+            } else if (key === 'ArrowDown') {
+                positionY += speed;
+            } else if (key === 'ArrowLeft') {
+                positionX -= speed;
+            } else if (key === 'ArrowRight') {
+                positionX += speed;
+            }
+
+            // Update the position of the image
+            updatePosition();
+        });
+    </script>
+</body>
+</html>

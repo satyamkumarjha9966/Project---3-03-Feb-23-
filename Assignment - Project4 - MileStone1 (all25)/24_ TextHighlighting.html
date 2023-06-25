@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Text Highlighting</title>
+    <style>
+        .bgcolor{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="textHighlight">Lorem ipsum, dolor sitlo Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ullam quaerat corporis, vel fugiat porro eligendi iste dignissimos nisi. Similique facere eveniet natus, placeat numquam dolores ea voluptatibus officia sequi atque pariatur quaerat incidunt in ut! Tempore nemo eveniet, cumque nisi cum aperiam voluptatem dolore. Iure officia ullam, odit voluptate in doloremque. Corrupti exercitationem at totam sunt, sint eveniet hic quam consequuntur atque dolore? Aspernatur, ad tempore vel modi obcaecati fuga vero totam tenetur sequi dolor pariatur temporibus nisi, fugiat nobis voluptatibus, assumenda facere adipisci dignissimos consequuntur. Repellendus molestiae rem nemo fugit exercitationem eaque id assumenda ab qui aspernatur odio vitae corporis nihil quos adipisci labore expedita, rerum similique. Quae, voluptates ad? Omnis, iusto! Excepturi, a quo dolorem nemo quae necessitatibus nulla tempore odio aperiam architecto officiis ex temporibus, aliquid facilis eaque vitae exercitationem neque ab hic nesciunt. Rerum quis non ratione voluptates amet error magni aliquid quo, atque alias molestias illum ullam ducimus. Eius, nemo. Aspernatur fuga quibusdam possimus alias commodi. Inventore vel reprehenderit similique officiis! Itaque rerum veniam consequatur maxime doloribus! Repellendus non tempore esse, explicabo et fuga rem quisquam dolor vitae, expedita neque nulla quas debitis blanditiis aut illum? Cum velit illo enim autem. Minus exercitationem ut ullam animi beatae tempore, harum commodi necessitatibus cum ipsa quo aspernatur nemo in. Fugiat sed ullam ipsam ab iure, illum temporibus nulla tempora dolore expedita earum unde corrupti illo ducimus beatae deleniti neque omnis veniam rerum rem nobis officiis et maiores minus? Tempore repudiandae quis beatae distinctio neque. Nulla, delectus quisquam eum alias perspiciatis rem, quae veniam sapiente ipsam laborum eveniet animi sed excepturi porro at neque quas ex dolorem aliquam illum enim quod? Reiciendis culpa laboriosam quisquam a maxime. Temporibus obcaecati ullam dignissimos placeat laborum. Iure veniam enim aut! Autem qui aliquam nobis earum ipsa quidem consequuntur sunt! Reiciendis tempora placeat, hic a minus dolor accusamus cum architecto ad eaque quo quisquam, soluta perferendis saepe optio repellat. Tempore deleniti commodi quos consequuntur numquam a possimus iste in quaerat velit iusto inventore culpa placeat, dolores iure impedit consequatur non facilis reiciendis voluptatibus dolorum praesentium! Culpa id vel at dignissimos, sapiente vitae iusto consequatur voluptas doloremque dolorum expedita omnis amet assumenda. Quidem enim error vero iure quas nihil quam ipsam harum inventore molestiae ab beatae totam vitae neque fuga alias earum sapiente animi, recusandae quaerat laborum culpa voluptatem illum! Distinctio deserunt officiis doloribus ratione cupiditate, nam debitis. Neque beatae similique laudantium sunt, nam illum commodi numquam provident minus qui inventore officia nisi eligendi labore dicta et facilis iure. Maxime expedita numquam illo quae consequuntur sapiente soluta repudiandae porro deserunt, dicta modi minus dolorum inventore reprehenderit aut eaque perferendis cupiditate debitis distinctio! Consectetur, provident unde corporis sunt eum doloribus, ullam quidem eos, tempora adipisci molestiae. Exercitationem incidunt dolore similique quidem necessitatibus laboriosam quis, tenetur optio aut sit laudantium illum neque eligendi alias voluptatibus. Ex voluptatibus illo dignissimos, vel accusantium nemo repudiandae, eligendi assumenda quasi perferendis reiciendis iure animi consequuntur sequi temporibus praesentium dolores nostrum facere sed exercitationem alias iste eos odit dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ducimus cupiditate dolores possimus magni hic quae assumenda molestiae excepturi repudiandae fugiat, sequi totam velit alias, earum ipsam quos non voluptatibus eaque labore vero. Possimus, non provident? Minus ab, harum atque laudantium pariatur maxime voluptatem obcaecati nisi, adipisci, mollitia animi perspiciatis.0 amet consecteturdipisicing elit. Consequatur verincidunt hic beatae mollitia voluptatem ea fuga a veniam dolor earum, vel culpa deserunt laudantium sunt accusantium. Veniam, vero? Reiciendis magni quasi unde nesciunt assumenda, impedit aliquam modi temporibus, ducimus consequatur explicabo maiores, debitis odio rerum sed ex doloremque deserunt. Officiis natus dolorem laboriosam recusandae sapiente odit optio tempora quod ratione maxime voluptate voluptatibus, deleniti corrupti aut, iure exercitationem vel at vero labore amet corporis explicabo minima perferendis consequuntur. Nobis, consequuntur. Officia, cupiditate. Consequatur rerum nemo eum temporedolore repellendus, sequi ratione expeditquisquam officiis voluptatem veniam. At, magni vitae.</p>
+
+
+    <script>
+            let TextHighlighter = document.getElementById('textHighlight');
+
+            // Split the text into an array of words
+            const words = TextHighlighter.textContent.split(" ");
+
+            // Loop through each word and check its length
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].length > 8) {
+                    words[i] = '<span class="bgcolor">' + words[i] + '</span>';
+                }
+                
+            }
+            TextHighlighter.innerHTML =  words.join(" ");
+            
+
+    </script>
+</body>
+</html>
+
+
+
+
+
